@@ -205,24 +205,33 @@
     .info-side {
       border-left: 1px solid var(--border);
       padding-left: 1.25rem;
+      line-height: 1.35; /* giảm giãn dòng toàn bộ cột bên phải */
+    }
+    .info-section {
+      margin-top: 0.9rem; /* giảm khoảng cách giữa các nhóm thông tin */
+    }
+    
+    .info-section:first-of-type {
+      margin-top: 0;
     }
 
-    .info-section-label {
+     .info-section-label {
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem; /* giảm khoảng cách từ tiêu đề đến nội dung */
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-
+    
     .info-list {
       list-style: none;
       font-size: 0.9rem;
+      line-height: 1.35; /* giảm khoảng cách giữa các dòng trong danh sách */
     }
-
+    
     .info-list li {
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.22rem; /* giảm khoảng cách giữa từng mục */
     }
 
     .info-section {
