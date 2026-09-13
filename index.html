@@ -233,20 +233,21 @@
       margin-top: 0;
     }
 
+   
     .info-header {
     display: flex;
-    align-items: flex-start;      /* chữ bám về phía trên bên trái */
-    justify-content: space-between; /* đẩy chữ sang trái, ảnh sang phải */
+    align-items: center;          /* căn giữa theo trục dọc (vertical middle) */
+    justify-content: space-between; /* chữ bên trái, ảnh bên phải */
     gap: 1.5rem;
     margin-bottom: 0.75rem;
     }
 
-.info-header h1,
-.info-header h2 {
-  text-align: left;             /* đảm bảo căn lề trái */
-}
+    .info-header h1,
+    .info-header h2 {
+      text-align: left;             /* đảm bảo chữ luôn căn lề trái */
+    }
 
-    .profile-photo {
+       .profile-photo {
       width: 150px;
       height: 200px;
       object-fit: cover;
