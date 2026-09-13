@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Ta Nam Nguyen | Personal Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal homepage of Dr. Ta Nam Nguyen, electrochemistry and energy materials researcher.">
+  <meta name="description" content="Personal homepage of Dr. Ta Nam Nguyen, researcher in nanomaterials, catalysis, and hydrogen production.">
   <style>
     :root {
       --bg: #f7f6f2;
@@ -45,8 +45,6 @@
       color: var(--primary-dark);
       text-decoration: underline;
     }
-
-    /* Layout */
 
     .page {
       max-width: 960px;
@@ -133,8 +131,6 @@
       box-shadow: 0 4px 10px rgba(1, 105, 111, 0.28);
     }
 
-    /* Main sections */
-
     main {
       margin-top: 1rem;
     }
@@ -173,14 +169,14 @@
 
     .info-main h1 {
       font-size: 1.6rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     .info-main h2 {
       font-size: 1rem;
       font-weight: 500;
       color: var(--text-muted);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .info-main p {
@@ -223,6 +219,31 @@
 
     .info-list li {
       margin-bottom: 0.45rem;
+    }
+
+    .info-section {
+      margin-top: 1.25rem;
+    }
+
+    .info-section:first-of-type {
+      margin-top: 0;
+    }
+
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+      border: 2px solid var(--accent);
+      background-color: #fff;
     }
 
     /* Publications */
@@ -312,8 +333,6 @@
       text-align: center;
     }
 
-    /* Responsive */
-
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -342,6 +361,10 @@
       .page {
         padding-inline: 1rem;
       }
+
+      .info-header {
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -354,7 +377,7 @@
         </div>
         <div class="brand-text">
           <span class="brand-text-title">Ta Nam Nguyen</span>
-          <span class="brand-text-sub">Electrochemistry & Energy Materials</span>
+          <span class="brand-text-sub">Researcher · Nanomaterials · Catalysis · Hydrogen production</span>
         </div>
       </div>
       <nav aria-label="Main navigation">
@@ -369,63 +392,86 @@
       <section id="info" class="section active" aria-labelledby="info-title">
         <div class="section-title" id="info-title">Information</div>
         <div class="section-subtitle">
-          Brief overview of my background and research interests.
+          Overview based on the latest CV (updated September 2026).
         </div>
 
         <div class="info-layout">
           <div class="info-main">
-            <h1>Dr. Ta Nam Nguyen</h1>
-            <h2>Postdoctoral Researcher – Electrochemistry, Energy Storage & Conversion</h2>
+            <div class="info-header">
+              <img src="photo.png"
+                   alt="Portrait of Dr. Ta Nam Nguyen"
+                   class="profile-photo"
+                   loading="lazy"
+                   width="150"
+                   height="200">
+              <div>
+                <h1>Dr. Ta Nam Nguyen</h1>
+                <h2>Postdoctoral Researcher – Energy Science and Technology, Chungnam National University</h2>
+              </div>
+            </div>
+
             <p>
-              I am currently a postdoctoral researcher at Chungnam National University, South Korea,
-              working on electrochemical catalysis, hydrogen and ammonia electrolysis, and
-              energy conversion materials.
+              I am a Ph.D. researcher in Energy Science and Technology with specialized expertise in
+              catalyst design and fabrication for hydrogen production from water and ammonia
+              using electrochemical methods.
             </p>
             <p>
-              My expertise covers catalyst synthesis and electrodeposition, preparation of
-              catalyst inks and membrane–electrode assemblies, and electrochemical testing
-              (CV, chronoamperometry, EIS) in three-electrode and electrolyzer configurations.
+              My work focuses on developing nanomaterials and electrocatalysts, optimizing
+              membrane–electrode assemblies and porous transport layers, and improving device
+              performance and durability for polymer electrolyte membrane water electrolysis
+              and related systems.
             </p>
             <p>
-              I am also interested in applying electrochemical concepts to practical devices,
-              educational content, and emerging energy technologies.
+              I am passionate about experimental research, precise data analysis, and
+              translating fundamental electrochemistry into practical energy technologies.
             </p>
 
             <div class="info-tags">
-              <span class="tag">Electrochemical catalysis</span>
-              <span class="tag">Hydrogen & ammonia electrolysis</span>
-              <span class="tag">Energy materials</span>
-              <span class="tag">Fuel cells</span>
-              <span class="tag">Electrode fabrication</span>
+              <span class="tag">Nanomaterials</span>
+              <span class="tag">Ammonia oxidation</span>
+              <span class="tag">Hydrogen production</span>
+              <span class="tag">PEM water electrolysis</span>
+              <span class="tag">Electrocatalyst durability</span>
             </div>
           </div>
 
           <aside class="info-side" aria-label="Affiliations and interests">
             <div class="info-section">
-              <div class="info-section-label">Current affiliation</div>
+              <div class="info-section-label">Current position</div>
               <ul class="info-list">
-                <li>Chungnam National University, South Korea</li>
-                <li>Energy Storage & Conversion related research</li>
+                >Postdoctoral Researcher</li>
+                >Chungnam National University, Daejeon, Korea</li>
+                >Graduate School of Energy Science and Technology</li>
               </ul>
             </div>
 
-            <div class="info-section" style="margin-top: 1.25rem;">
+            <div class="info-section">
+              <div class="info-section-label">Education</div>
+              <ul class="info-list">
+                >Ph.D. Energy Science and Technology, Chungnam National University (2021–2026)</li>
+                >M.Sc. Environmental Sciences, VNU University of Science (2017–2020)</li>
+                >Master exchange student, University of Valladolid, Spain (ERASMUS+ KA107)</li>
+                >B.Sc. Environmental Science, VNU University of Science (2010–2014)</li>
+              </ul>
+            </div>
+
+            <div class="info-section">
               <div class="info-section-label">Research interests</div>
               <ul class="info-list">
-                <li>Electrochemical ammonia oxidation & hydrogen production</li>
-                <li>Electrocatalyst design and stability</li>
-                <li>Membrane–electrode assemblies & zero-gap electrolyzers</li>
-                <li>Energy conversion and fuel cell systems</li>
+                >Electrocatalytic ammonia oxidation for hydrogen production</li>
+                >Pt–Ni and IrO<sub>2</sub>-based catalysts for PEM water electrolysis</li>
+                >Porous transport layer design and interface/surface control</li>
+                >High oxygen permeable ionomers and MEA engineering</li>
               </ul>
             </div>
 
-            <div class="info-section" style="margin-top: 1.25rem;">
-              <div class="info-section-label">Skills</div>
+            <div class="info-section">
+              <div class="info-section-label">Technical skills</div>
               <ul class="info-list">
-                <li>Electrochemical measurements (CV, CA, EIS)</li>
-                <li>Catalyst synthesis & electrodeposition</li>
-                <li>Scientific writing and presentations</li>
-                <li>HTML / CSS / JavaScript for simple web tools</li>
+                >Electrochemical analysis: CV, LSV, EIS, chronoamperometry</li>
+                >Material characterization: XRD, SEM, TEM, EDS, XPS, BET, TGA, AFM</li>
+                >Catalyst synthesis and modification (alloying, coatings, treatments)</li>
+                >Data analysis and scientific writing (Origin, ChemDraw, R)</li>
               </ul>
             </div>
           </aside>
@@ -436,65 +482,183 @@
       <section id="publications" class="section" aria-labelledby="pub-title">
         <div class="section-title" id="pub-title">Publications</div>
         <div class="section-subtitle">
-          Selected publications related to electrochemistry, catalysts, and energy materials.
-          (Replace the examples below with your actual list.)
+          Selected publications in ammonia oxidation, hydrogen production, and electrochemical energy systems.
         </div>
 
         <div class="pub-group">
-          <div class="pub-group-title">Recent peer-reviewed articles</div>
+          <div class="pub-group-title">Journal articles</div>
           <ul class="pub-list">
-            <li class="pub-item">
+            >
               <div class="pub-title">
-                Example title: Electrochemical oxidation of ammonia on advanced transition-metal catalysts
+                A review of recent progress and future perspectives in catalyst design for the electrocatalytic
+                ammonia oxidation reaction.
               </div>
               <div class="pub-authors">
-                T. N. Nguyen, et al.
+                Nguyen TN, Doan TL, Kim T.
               </div>
               <div class="pub-venue">
-                Journal of Electrochemical Energy Conversion, 2024 (Example entry)
-              </div>
-              <div class="pub-links">
-                <a href="#" target="_blank" rel="noopener noreferrer">DOI / Link</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+                Journal of Power Sources, 2026.
               </div>
             </li>
 
-            <li class="pub-item">
+            >
               <div class="pub-title">
-                Example title: Membrane–electrode assemblies for efficient hydrogen production
+                Effectively enhancing Pt–Ni nanocatalyst durability for ammonia oxidation toward efficient hydrogen
+                production via polymer sacrificial protective layer and synergistic thermal engineering.
               </div>
               <div class="pub-authors">
-                T. N. Nguyen, et al.
+                Nguyen TN, Doan TL, Hong H, Kim T.
               </div>
               <div class="pub-venue">
-                Energy Materials Advances, 2023 (Example entry)
+                Fuel, 2026.
               </div>
-              <div class="pub-links">
-                <a href="#" target="_blank" rel="noopener noreferrer">DOI / Link</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+            </li>
+
+            >
+              <div class="pub-title">
+                Tuning the morphological and catalytic properties of Pt–Ni alloys for ammonia oxidation.
+              </div>
+              <div class="pub-authors">
+                Nguyen TN, Doan TL, Hong H, Kim T.
+              </div>
+              <div class="pub-venue">
+                Journal of Electroanalytical Chemistry, 2026.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Development of highly active Pt–Ni catalysts with synergistic effects of Ni promoter on morphology
+                and structure for ammonia electrooxidation reaction.
+              </div>
+              <div class="pub-authors">
+                Nguyen TN, Doan TL, Hong H, Kim T.
+              </div>
+              <div class="pub-venue">
+                International Journal of Hydrogen Energy, 2025.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Enhancement of mass transport behavior by controlling the surface structure of the porous
+                transport layer for polymer electrolyte membrane water electrolysis.
+              </div>
+              <div class="pub-authors">
+                Lee H†, Nguyen TN†, Doan TL, Hong H, Kim T.
+              </div>
+              <div class="pub-venue">
+                Applied Thermal Engineering, 2025.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Understanding of high oxygen permeable ionomers for polymer electrolyte membrane fuel cell.
+              </div>
+              <div class="pub-authors">
+                Hong HS, Doan TL, Nguyen TN, Kim T.
+              </div>
+              <div class="pub-venue">
+                Journal of Power Sources, 2026.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Enhanced activity and exceptional durability of IrO<sub>2</sub> catalysts supported on conductive
+                Magnéli phase Ti<sub>4</sub>O<sub>7</sub> for polymer electrolyte membrane water electrolysis.
+              </div>
+              <div class="pub-authors">
+                Doan TL, Nguyen TN, Hong HS, Kim T.
+              </div>
+              <div class="pub-venue">
+                Journal of Alloys and Compounds, 2026.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Development of an oxygen evolution reaction electrocatalyst of TiO<sub>2</sub>-supported
+                IrO<sub>2</sub> (IrO<sub>2</sub>@TiO<sub>2</sub>) for enhancing performance and durability
+                of polymer electrolyte membrane water electrolysis.
+              </div>
+              <div class="pub-authors">
+                Doan TL, Nguyen TN, Hong HS, Kim T.
+              </div>
+              <div class="pub-venue">
+                International Journal of Hydrogen Energy, 2025.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Study on the effect of IrO<sub>2</sub>/TiO<sub>2</sub> catalyst composition coated on porous
+                transport layer on the performance and durability of polymer electrolyte membrane water
+                electrolysis.
+              </div>
+              <div class="pub-authors">
+                Doan TL, Nguyen TN, Jung Y, Lee C, Kim M, Lee S, Cho H, Kim T.
+              </div>
+              <div class="pub-venue">
+                International Journal of Hydrogen Energy, 2024.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Research and Development Trends in Seawater Electrolysis Systems and Catalysts.
+              </div>
+              <div class="pub-authors">
+                Jung Y, Doan TL, Nguyen TN, Kim T.
+              </div>
+              <div class="pub-venue">
+                Applied Chemistry for Engineering, 2023.
               </div>
             </li>
           </ul>
         </div>
 
         <div class="pub-group">
-          <div class="pub-group-title">Other outputs</div>
+          <div class="pub-group-title">Projects (selected)</div>
           <ul class="pub-list">
-            <li class="pub-item">
+            >
               <div class="pub-title">
-                Conference presentations on ammonia electrolysis and fuel cell technologies
+                Development of a manufacturing process technology for membrane electrode assemblies for
+                hydrogen fuel cells using high oxygen permeability binders.
               </div>
               <div class="pub-venue">
-                Various international conferences (to be listed in detail)
+                Student researcher – Korea Institute of Industrial Technology Planning and Evaluation,
+                2024–2026.
               </div>
             </li>
 
-            <li class="pub-item">
+            >
               <div class="pub-title">
-                Educational content and short-form explanations on electrochemistry and energy devices
+                Development of accelerated verification techniques for efficient electrochemical cell
+                element technology design.
               </div>
               <div class="pub-venue">
-                Online materials, lecture notes, and videos
+                Student researcher – Hyundai Engineering & Construction Co., Ltd., 2022–2024.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Research on improvement of PEM water electrolysis diffusion layer for high-efficiency
+                hydrogen production.
+              </div>
+              <div class="pub-venue">
+                Student researcher – Korea Institute of Energy Research, 2022.
+              </div>
+            </li>
+
+            >
+              <div class="pub-title">
+                Interface/surface control of PEM electrolysis diffusion layers for high current density.
+              </div>
+              <div class="pub-venue">
+                Student researcher – National Research Foundation of Korea, 2019–2022.
               </div>
             </li>
           </ul>
@@ -505,29 +669,34 @@
       <section id="contact" class="section" aria-labelledby="contact-title">
         <div class="section-title" id="contact-title">Contact</div>
         <div class="section-subtitle">
-          Feel free to reach out regarding research collaborations, academic positions, or educational projects.
+          Please contact me regarding research collaborations, academic positions, or educational projects.
         </div>
 
         <div class="contact-grid">
           <div>
             <div class="contact-item">
               <span class="contact-label">Email</span>
-              <span>your.email@example.com</span>
+              <span>tanam.nguyen@cnu.ac.kr</span>
               <div class="contact-note">
-                Replace with your main professional email address.
+                Main professional email address.
               </div>
             </div>
 
             <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <span>(+82) 10 9791 3225</span>
+            </div>
+
+            <div class="contact-item">
               <span class="contact-label">Current location</span>
-              <span>Daejeon, South Korea</span>
+              <span>Daejeon, Korea</span>
             </div>
 
             <div class="contact-item">
               <span class="contact-label">Preferred topics</span>
               <span>
-                Electrochemical collaboration, postdoctoral/academic positions, energy materials projects,
-                educational content co-creation.
+                Electrochemical collaboration, hydrogen and ammonia projects, nanomaterials,
+                PEMWE/PEMFC research, and educational content.
               </span>
             </div>
           </div>
@@ -547,9 +716,16 @@
             </div>
 
             <div class="contact-item">
-              <span class="contact-label">Additional notes</span>
+              <span class="contact-label">Languages</span>
               <span>
-                You can also add Korean contact details (KakaoTalk ID, phone) here if needed for local collaboration.
+                Vietnamese (native), English (fluent), Korean (beginner).
+              </span>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Reference</span>
+              <span>
+                Prof. Taekeun Kim – Chungnam National University (Energy Science and Technology).
               </span>
             </div>
           </div>
@@ -563,7 +739,6 @@
   </div>
 
   <script>
-    // Tab navigation
     (function () {
       const navLinks = document.querySelectorAll(".nav-link");
       const sections = document.querySelectorAll(".section");
@@ -583,7 +758,6 @@
         });
       });
 
-      // Footer year
       const yearSpan = document.getElementById("year");
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
