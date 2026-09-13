@@ -234,13 +234,17 @@
     }
 
     .info-header {
-      display: flex;
-      text-align: center;
-      align-items: center;
-      gap: 1.25rem;
-      margin-bottom: 0.75rem;
-    
+    display: flex;
+    align-items: flex-start;      /* chữ bám về phía trên bên trái */
+    justify-content: space-between; /* đẩy chữ sang trái, ảnh sang phải */
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
     }
+
+.info-header h1,
+.info-header h2 {
+  text-align: left;             /* đảm bảo căn lề trái */
+}
 
     .profile-photo {
       width: 150px;
