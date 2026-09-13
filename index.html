@@ -1,156 +1,594 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trang học tiếng Hàn</title>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@400,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Ta Nam Nguyen | Personal Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal homepage of Dr. Ta Nam Nguyen, electrochemistry and energy materials researcher.">
   <style>
-    :root, [data-theme="light"] {
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
-      --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem; --space-12: 3rem;
-      --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #fbfbf9; --color-border: #d4d1ca;
-      --color-text: #28251d; --color-text-muted: #7a7974; --color-primary: #01696f; --color-primary-hover: #0c4e54; --color-primary-highlight: #cedcd8;
-      --radius-md: 0.75rem; --radius-lg: 1rem; --radius-full: 9999px; --shadow-md: 0 4px 12px rgba(40,37,29,0.08);
-      --font-display: 'Zodiak', Georgia, serif; --font-body: 'Satoshi', Arial, sans-serif;
+    :root {
+      --bg: #f7f6f2;
+      --bg-alt: #ffffff;
+      --primary: #01696f;
+      --primary-dark: #0c4e54;
+      --text: #262422;
+      --text-muted: #6f6c68;
+      --border: #d4d1ca;
+      --accent: #e0ded6;
+      --radius: 10px;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
-    [data-theme="dark"] {
-      --color-bg: #171614; --color-surface: #1c1b19; --color-surface-2: #201f1d; --color-border: #393836;
-      --color-text: #cdccca; --color-text-muted: #979590; --color-primary: #4f98a3; --color-primary-hover: #227f8b; --color-primary-highlight: #313b3b;
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: var(--space-8) var(--space-4) var(--space-12); }
-    .topbar { display: flex; justify-content: space-between; gap: var(--space-4); align-items: center; margin-bottom: var(--space-8); }
-    .brand { display: flex; gap: var(--space-3); align-items: center; }
-    .logo { width: 44px; height: 44px; color: var(--color-primary); }
-    .theme-btn { border: 1px solid var(--color-border); background: var(--color-surface); border-radius: var(--radius-full); padding: 0.8rem 1rem; cursor: pointer; }
-    .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-6); align-items: stretch; margin-bottom: var(--space-8); }
-    .hero-card, .side-card, .table-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
-    .hero-card { padding: var(--space-8); }
-    .side-card { padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between; }
-    h1 { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.05; margin: 0 0 var(--space-4); }
-    h2 { font-size: var(--text-lg); margin: 0 0 var(--space-4); }
-    .muted { color: var(--color-text-muted); }
-    .pill { display: inline-block; background: var(--color-primary-highlight); color: var(--color-primary); padding: 0.35rem 0.75rem; border-radius: var(--radius-full); font-size: var(--text-sm); margin-bottom: var(--space-4); }
-    .quick-links { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
-    .quick-links a { padding: 0.75rem 1rem; background: var(--color-primary); color: white; border-radius: var(--radius-full); font-size: var(--text-sm); }
-    .quick-links a:hover { background: var(--color-primary-hover); }
-    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-4); }
-    .stat { padding: var(--space-4); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
-    .stat strong { display: block; font-size: var(--text-xl); }
-    .table-card { padding: var(--space-6); }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { text-align: left; padding: 0.95rem 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
-    th { font-size: var(--text-sm); color: var(--color-text-muted); }
-    tbody tr:hover { background: var(--color-surface-2); }
-    .lesson-link { color: var(--color-primary); font-weight: 700; }
-    .footer-note { margin-top: var(--space-6); color: var(--color-text-muted); font-size: var(--text-sm); }
-    @media (max-width: 820px) {
-      .hero { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    /* Layout */
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      border-radius: var(--radius);
+      background-color: var(--bg-alt);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0.75rem;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #01919a, var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-link {
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background-color: transparent;
+      color: var(--text-muted);
+      transition: all 0.18s ease-out;
+    }
+
+    .nav-link:hover {
+      border-color: var(--border);
+      color: var(--text);
+      background-color: var(--accent);
+    }
+
+    .nav-link.active {
+      background-color: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(1, 105, 111, 0.28);
+    }
+
+    /* Main sections */
+
+    main {
+      margin-top: 1rem;
+    }
+
+    .section {
+      display: none;
+      background-color: var(--bg-alt);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Information section */
+
+    .info-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+    }
+
+    .info-main h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-main h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .info-main p {
+      margin-bottom: 0.75rem;
+    }
+
+    .info-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background-color: var(--accent);
+      color: var(--text-muted);
+    }
+
+    .info-side {
+      border-left: 1px solid var(--border);
+      padding-left: 1.25rem;
+    }
+
+    .info-section-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .info-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .info-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    /* Publications */
+
+    .pub-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-group-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pub-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .pub-item {
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pub-title {
+      font-weight: 500;
+    }
+
+    .pub-authors {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .pub-venue {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .pub-links {
+      margin-top: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .pub-links a {
+      margin-right: 0.75rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.75rem;
+    }
+
+    .contact-item {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin-right: 0.75rem;
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .info-layout,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .info-side {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--border);
+        padding-top: 1rem;
+      }
+
+      .page {
+        padding-inline: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
+  <div class="page">
+    <header>
       <div class="brand">
-        <svg class="logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Korean study logo">
-          <rect x="4" y="6" width="40" height="36" rx="10" stroke="currentColor" stroke-width="3"/>
-          <path d="M16 18H32M16 24H28M16 30H24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <div>
-          <strong>Học tiếng Hàn</strong><br>
-          <span class="muted">50 trang bài học nội bộ</span>
+        <div class="brand-mark" aria-label="Logo TN">
+          TN
+        </div>
+        <div class="brand-text">
+          <span class="brand-text-title">Ta Nam Nguyen</span>
+          <span class="brand-text-sub">Electrochemistry & Energy Materials</span>
         </div>
       </div>
-      <button class="theme-btn" data-theme-toggle aria-label="Đổi giao diện">🌙</button>
+      <nav aria-label="Main navigation">
+        <button class="nav-link active" data-target="info">Information</button>
+        <button class="nav-link" data-target="publications">Publications</button>
+        <button class="nav-link" data-target="contact">Contact</button>
+      </nav>
     </header>
 
     <main>
-     
-      <section class="table-card">
-        <h2>Danh sách bài học</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Trang</th>
-              <th>Liên kết</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>1.html</td><td><a class='lesson-link' href='./1.html'>Mở trang 1</a></td></tr>
-<tr><td>2.html</td><td><a class='lesson-link' href='./2.html'>Mở trang 2</a></td></tr>
-<tr><td>3.html</td><td><a class='lesson-link' href='./3.html'>Mở trang 3</a></td></tr>
-<tr><td>4.html</td><td><a class='lesson-link' href='./4.html'>Mở trang 4</a></td></tr>
-<tr><td>5.html</td><td><a class='lesson-link' href='./5.html'>Mở trang 5</a></td></tr>
-<tr><td>6.html</td><td><a class='lesson-link' href='./6.html'>Mở trang 6</a></td></tr>
-<tr><td>7.html</td><td><a class='lesson-link' href='./7.html'>Mở trang 7</a></td></tr>
-<tr><td>8.html</td><td><a class='lesson-link' href='./8.html'>Mở trang 8</a></td></tr>
-<tr><td>9.html</td><td><a class='lesson-link' href='./9.html'>Mở trang 9</a></td></tr>
-<tr><td>10.html</td><td><a class='lesson-link' href='./10.html'>Mở trang 10</a></td></tr>
-<tr><td>11.html</td><td><a class='lesson-link' href='./11.html'>Mở trang 11</a></td></tr>
-<tr><td>12.html</td><td><a class='lesson-link' href='./12.html'>Mở trang 12</a></td></tr>
-<tr><td>13.html</td><td><a class='lesson-link' href='./13.html'>Mở trang 13</a></td></tr>
-<tr><td>14.html</td><td><a class='lesson-link' href='./14.html'>Mở trang 14</a></td></tr>
-<tr><td>15.html</td><td><a class='lesson-link' href='./15.html'>Mở trang 15</a></td></tr>
-<tr><td>16.html</td><td><a class='lesson-link' href='./16.html'>Mở trang 16</a></td></tr>
-<tr><td>17.html</td><td><a class='lesson-link' href='./17.html'>Mở trang 17</a></td></tr>
-<tr><td>18.html</td><td><a class='lesson-link' href='./18.html'>Mở trang 18</a></td></tr>
-<tr><td>19.html</td><td><a class='lesson-link' href='./19.html'>Mở trang 19</a></td></tr>
-<tr><td>20.html</td><td><a class='lesson-link' href='./20.html'>Mở trang 20</a></td></tr>
-<tr><td>21.html</td><td><a class='lesson-link' href='./21.html'>Mở trang 21</a></td></tr>
-<tr><td>22.html</td><td><a class='lesson-link' href='./22.html'>Mở trang 22</a></td></tr>
-<tr><td>23.html</td><td><a class='lesson-link' href='./23.html'>Mở trang 23</a></td></tr>
-<tr><td>24.html</td><td><a class='lesson-link' href='./24.html'>Mở trang 24</a></td></tr>
-<tr><td>25.html</td><td><a class='lesson-link' href='./25.html'>Mở trang 25</a></td></tr>
-<tr><td>26.html</td><td><a class='lesson-link' href='./26.html'>Mở trang 26</a></td></tr>
-<tr><td>27.html</td><td><a class='lesson-link' href='./27.html'>Mở trang 27</a></td></tr>
-<tr><td>28.html</td><td><a class='lesson-link' href='./28.html'>Mở trang 28</a></td></tr>
-<tr><td>29.html</td><td><a class='lesson-link' href='./29.html'>Mở trang 29</a></td></tr>
-<tr><td>30.html</td><td><a class='lesson-link' href='./30.html'>Mở trang 30</a></td></tr>
-<tr><td>31.html</td><td><a class='lesson-link' href='./31.html'>Mở trang 31</a></td></tr>
-<tr><td>32.html</td><td><a class='lesson-link' href='./32.html'>Mở trang 32</a></td></tr>
-<tr><td>33.html</td><td><a class='lesson-link' href='./33.html'>Mở trang 33</a></td></tr>
-<tr><td>34.html</td><td><a class='lesson-link' href='./34.html'>Mở trang 34</a></td></tr>
-<tr><td>35.html</td><td><a class='lesson-link' href='./35.html'>Mở trang 35</a></td></tr>
-<tr><td>36.html</td><td><a class='lesson-link' href='./36.html'>Mở trang 36</a></td></tr>
-<tr><td>37.html</td><td><a class='lesson-link' href='./37.html'>Mở trang 37</a></td></tr>
-<tr><td>38.html</td><td><a class='lesson-link' href='./38.html'>Mở trang 38</a></td></tr>
-<tr><td>39.html</td><td><a class='lesson-link' href='./39.html'>Mở trang 39</a></td></tr>
-<tr><td>40.html</td><td><a class='lesson-link' href='./40.html'>Mở trang 40</a></td></tr>
-<tr><td>41.html</td><td><a class='lesson-link' href='./41.html'>Mở trang 41</a></td></tr>
-<tr><td>42.html</td><td><a class='lesson-link' href='./42.html'>Mở trang 42</a></td></tr>
-<tr><td>43.html</td><td><a class='lesson-link' href='./43.html'>Mở trang 43</a></td></tr>
-<tr><td>44.html</td><td><a class='lesson-link' href='./44.html'>Mở trang 44</a></td></tr>
-<tr><td>45.html</td><td><a class='lesson-link' href='./45.html'>Mở trang 45</a></td></tr>
-<tr><td>46.html</td><td><a class='lesson-link' href='./46.html'>Mở trang 46</a></td></tr>
-<tr><td>47.html</td><td><a class='lesson-link' href='./47.html'>Mở trang 47</a></td></tr>
-<tr><td>48.html</td><td><a class='lesson-link' href='./48.html'>Mở trang 48</a></td></tr>
-<tr><td>49.html</td><td><a class='lesson-link' href='./49.html'>Mở trang 49</a></td></tr>
-<tr><td>50.html</td><td><a class='lesson-link' href='./50.html'>Mở trang 50</a></td></tr>
-          </tbody>
-        </table>
-        <p class="footer-note">Mỗi liên kết mở tới một tệp HTML riêng trong cùng thư mục với trang chính.</p>
+      <!-- Information -->
+      <section id="info" class="section active" aria-labelledby="info-title">
+        <div class="section-title" id="info-title">Information</div>
+        <div class="section-subtitle">
+          Brief overview of my background and research interests.
+        </div>
+
+        <div class="info-layout">
+          <div class="info-main">
+            <h1>Dr. Ta Nam Nguyen</h1>
+            <h2>Postdoctoral Researcher – Electrochemistry, Energy Storage & Conversion</h2>
+            <p>
+              I am currently a postdoctoral researcher at Chungnam National University, South Korea,
+              working on electrochemical catalysis, hydrogen and ammonia electrolysis, and
+              energy conversion materials.
+            </p>
+            <p>
+              My expertise covers catalyst synthesis and electrodeposition, preparation of
+              catalyst inks and membrane–electrode assemblies, and electrochemical testing
+              (CV, chronoamperometry, EIS) in three-electrode and electrolyzer configurations.
+            </p>
+            <p>
+              I am also interested in applying electrochemical concepts to practical devices,
+              educational content, and emerging energy technologies.
+            </p>
+
+            <div class="info-tags">
+              <span class="tag">Electrochemical catalysis</span>
+              <span class="tag">Hydrogen & ammonia electrolysis</span>
+              <span class="tag">Energy materials</span>
+              <span class="tag">Fuel cells</span>
+              <span class="tag">Electrode fabrication</span>
+            </div>
+          </div>
+
+          <aside class="info-side" aria-label="Affiliations and interests">
+            <div class="info-section">
+              <div class="info-section-label">Current affiliation</div>
+              <ul class="info-list">
+                <li>Chungnam National University, South Korea</li>
+                <li>Energy Storage & Conversion related research</li>
+              </ul>
+            </div>
+
+            <div class="info-section" style="margin-top: 1.25rem;">
+              <div class="info-section-label">Research interests</div>
+              <ul class="info-list">
+                <li>Electrochemical ammonia oxidation & hydrogen production</li>
+                <li>Electrocatalyst design and stability</li>
+                <li>Membrane–electrode assemblies & zero-gap electrolyzers</li>
+                <li>Energy conversion and fuel cell systems</li>
+              </ul>
+            </div>
+
+            <div class="info-section" style="margin-top: 1.25rem;">
+              <div class="info-section-label">Skills</div>
+              <ul class="info-list">
+                <li>Electrochemical measurements (CV, CA, EIS)</li>
+                <li>Catalyst synthesis & electrodeposition</li>
+                <li>Scientific writing and presentations</li>
+                <li>HTML / CSS / JavaScript for simple web tools</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="section" aria-labelledby="pub-title">
+        <div class="section-title" id="pub-title">Publications</div>
+        <div class="section-subtitle">
+          Selected publications related to electrochemistry, catalysts, and energy materials.
+          (Replace the examples below with your actual list.)
+        </div>
+
+        <div class="pub-group">
+          <div class="pub-group-title">Recent peer-reviewed articles</div>
+          <ul class="pub-list">
+            <li class="pub-item">
+              <div class="pub-title">
+                Example title: Electrochemical oxidation of ammonia on advanced transition-metal catalysts
+              </div>
+              <div class="pub-authors">
+                T. N. Nguyen, et al.
+              </div>
+              <div class="pub-venue">
+                Journal of Electrochemical Energy Conversion, 2024 (Example entry)
+              </div>
+              <div class="pub-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">DOI / Link</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-title">
+                Example title: Membrane–electrode assemblies for efficient hydrogen production
+              </div>
+              <div class="pub-authors">
+                T. N. Nguyen, et al.
+              </div>
+              <div class="pub-venue">
+                Energy Materials Advances, 2023 (Example entry)
+              </div>
+              <div class="pub-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">DOI / Link</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pub-group">
+          <div class="pub-group-title">Other outputs</div>
+          <ul class="pub-list">
+            <li class="pub-item">
+              <div class="pub-title">
+                Conference presentations on ammonia electrolysis and fuel cell technologies
+              </div>
+              <div class="pub-venue">
+                Various international conferences (to be listed in detail)
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-title">
+                Educational content and short-form explanations on electrochemistry and energy devices
+              </div>
+              <div class="pub-venue">
+                Online materials, lecture notes, and videos
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="section-title" id="contact-title">Contact</div>
+        <div class="section-subtitle">
+          Feel free to reach out regarding research collaborations, academic positions, or educational projects.
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <span>your.email@example.com</span>
+              <div class="contact-note">
+                Replace with your main professional email address.
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Current location</span>
+              <span>Daejeon, South Korea</span>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Preferred topics</span>
+              <span>
+                Electrochemical collaboration, postdoctoral/academic positions, energy materials projects,
+                educational content co-creation.
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-item">
+              <span class="contact-label">Profiles</span>
+              <div class="contact-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">ORCID</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+              </div>
+              <div class="contact-note">
+                Replace "#" with your actual profile URLs.
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Additional notes</span>
+              <span>
+                You can also add Korean contact details (KakaoTalk ID, phone) here if needed for local collaboration.
+              </span>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <footer>
+      &copy; <span id="year"></span> Ta Nam Nguyen · Personal homepage
+    </footer>
   </div>
+
   <script>
-    const toggle = document.querySelector('[data-theme-toggle]');
-    let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const applyTheme = () => {
-      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      toggle.textContent = dark ? '☀️' : '🌙';
-    };
-    applyTheme();
-    toggle.addEventListener('click', () => { dark = !dark; applyTheme(); });
+    // Tab navigation
+    (function () {
+      const navLinks = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll(".section");
+
+      function showSection(id) {
+        sections.forEach(sec => {
+          sec.classList.toggle("active", sec.id === id);
+        });
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          const target = link.getAttribute("data-target");
+          navLinks.forEach(l => l.classList.remove("active"));
+          link.classList.add("active");
+          showSection(target);
+        });
+      });
+
+      // Footer year
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    })();
   </script>
 </body>
 </html>
